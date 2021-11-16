@@ -8,6 +8,11 @@ uid = rnd_num.slice(0,3);
 
 seed = rnd_num.slice(3);
 
+var corsOptions = {
+  origin: 'http://maeno-backend-service.maeno-be.svc.cluster.local',
+  optionsSuccessStatus: 200
+}
+
 const { MongoClient } = require('mongodb');
 const uri = "mongodb+srv://maeno-user:n6gJSjGf3IZq86Ml@demo.bmqni.mongodb.net/maeno?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
